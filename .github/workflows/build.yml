@@ -95,7 +95,7 @@ jobs:
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
           docker buildx build --platform linux/arm/v7,linux/arm/v6,linux/arm64,linux/amd64 \
-            -t ghcr.io/nmnellis/fake-service:v2 \
+            -t ghcr.io/nmnellis/fake-service:v3 \
             -f ./Dockerfile \
             ./bin \
             --push
